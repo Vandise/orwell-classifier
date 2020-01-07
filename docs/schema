@@ -1,0 +1,108 @@
+// === User Control ===
+
+tbl users:
+  id
+  display_name
+  email
+  deleted
+  created_at
+  updated_at
+
+tbl roles
+  id
+  name
+  created_at
+  updated_at
+
+tbl users_roles
+  user_id
+  role_id
+
+tbl access_tokens
+  id
+  user_id
+  token
+  expires_at
+  created_at
+  updated_at
+
+
+// === Websites / Scans ===
+
+tbl companies:
+  id
+  name
+  url
+  notes
+  deleted
+  created_at
+  updated_at
+
+tbl scan_requests
+  id
+  company_id
+  user_id
+  completed_at
+  created_at
+  updated_at
+
+tbl scan_results
+   id
+   scan_request_id
+   browser_request_id
+   protocol
+   domain
+   path
+   query
+   hash
+   raw
+   request_method
+   referer
+   headers
+   word_matrix
+   classified_at
+   created_at
+   updated_at
+
+tbl scan_performance_results
+  id
+  scan_request_id
+  browser_request_id
+  data_length
+  encoded_data_length
+  created_at
+  updated_at
+
+// === Matrix Classification ===
+
+tbl word_matrix_category
+  word_matrix
+  category_id
+  classification_meta
+  manually_categorized
+  manually_categorized_by
+  created_at
+  updated_at  
+
+// === Bernoulli Classification ===
+
+tbl categories
+  id
+  name
+  document_count
+  created_at
+  updated_at
+
+tbl categories_vocabulary
+  category_id
+  vocabulary_id
+  document_count
+  created_at
+  updated_at  
+
+tbl vocabulary
+  id
+  word
+  disabled
+  created_at
+  updated_at
