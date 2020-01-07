@@ -23,16 +23,18 @@ END_DESCRIBE
 
 DESCRIBE(classifier_bernoulli_b_t, "Bernoulli Classifier b_t")
 
-  IT("Returns TRUE if the word is present")
-    SHOULD_EQUAL(b_t(3, "0F"), TRUE);
+  // 12 - 00010010
+  // 0A - 00001010
+  IT("Returns 1 if the word is present")
+    SHOULD_EQUAL(b_t(11, "12A"), 1);
   END_IT
 
-  IT("Returns FALSE if the word is not present")
-    SHOULD_EQUAL(b_t(4, "0F"), FALSE);
+  IT("Returns 0 if the word is not present")
+    SHOULD_EQUAL(b_t(4, "8F"), 0);
   END_IT
 
-  IT("Returns FALSE if an invalid word is specified")
-    SHOULD_EQUAL(b_t(9, "0F"), FALSE);
+  IT("Returns 0 if an invalid word is specified")
+    SHOULD_EQUAL(b_t(8, "0F"), 0);
   END_IT
 END_DESCRIBE
 
