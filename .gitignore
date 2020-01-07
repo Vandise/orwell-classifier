@@ -2,7 +2,6 @@
 bin/
 obj/
 .tmp/
-test/**/*test.c
 autom4te.cache/
 config.log
 config.status
