@@ -23,10 +23,17 @@ END_DESCRIBE
 
 DESCRIBE(classifier_bernoulli_b_t, "Bernoulli Classifier b_t")
 
-  IT("Returns true if the word is present")
-    b_t(17, "10000\0");
+  IT("Returns TRUE if the word is present")
+    SHOULD_EQUAL(b_t(3, "0F"), TRUE);
   END_IT
 
+  IT("Returns FALSE if the word is not present")
+    SHOULD_EQUAL(b_t(4, "0F"), FALSE);
+  END_IT
+
+  IT("Returns FALSE if an invalid word is specified")
+    SHOULD_EQUAL(b_t(9, "0F"), FALSE);
+  END_IT
 END_DESCRIBE
 
 DESCRIBE(classifier_bernoulli, "Bernoulli Classifier")
