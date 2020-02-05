@@ -1,0 +1,18 @@
+### SOH
+1|6|11  # category id, Nk, N
+9A      # The binary string to be classified
+### STX
+3       # nk(wt) - the number of docs with wt observered
+1       # where t is the vocab id in ascending order
+2
+3
+3
+4
+4
+4
+### ETX
+
+any additional data/notes here is ignored
+and for internal purposes
+
+### EOT

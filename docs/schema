@@ -106,3 +106,17 @@ tbl vocabulary
   disabled
   created_at
   updated_at
+
+
+// === Classification Query ===
+categories_vocabulary needs to have 0 for categories without a word
+
+SELECT
+  category_id    AS k,
+  document_count AS nk_wt
+FROM categories_vocabulary
+WHERE category_id = <id>
+ORDER BY vocabulary_id ASC
+
+
+

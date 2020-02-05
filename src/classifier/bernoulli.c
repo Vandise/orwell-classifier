@@ -61,7 +61,7 @@ const unsigned short int b_t(const unsigned long int word_id, const char *b_doc_
 
   log_info("b_t bit status id(%d) idx(%d) position(%d) word(%02x) found(%d)",
     word_id,
-    word_position,s
+    word_position,
     bit_position,
     byte_array[word_position],
     found
